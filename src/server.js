@@ -7,6 +7,7 @@ const app = express()
 app.use(express.static('public'))
 
 mongoose.connect('mongodb://localhost:27017/userslinks')
+
 .then (() => {
       console.log('MongoDB connected! Nice, Dima')
 })
@@ -14,6 +15,10 @@ mongoose.connect('mongodb://localhost:27017/userslinks')
 app.get('/', (req, res) => {
     //res.send('MotherFucker! Yeah!')
       res.render('index')
+})
+
+app.post('/', (req, res) => {
+      res.send('OK')
 })
 
 app.get('/link-management-id', (req, res) => {
