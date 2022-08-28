@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 
 const app = express()
 
+app.use(express.static('public'))
+
 mongoose.connect('mongodb://localhost:27017/userslinks')
 .then (() => {
       console.log('MongoDB connected! Nice, Dima')
@@ -20,6 +22,7 @@ app.get('/link-management-id', (req, res) => {
 
 
 app.use(expressLayouts)
+app.set('layout', './layouts/full-width')
 app.set('view engine', 'ejs')
 
 const PORT = 3000
