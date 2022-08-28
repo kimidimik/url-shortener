@@ -8,23 +8,22 @@ app.use(express.static('public'))
 
 mongoose.connect('mongodb://localhost:27017/userslinks')
 
-.then (() => {
-      console.log('MongoDB connected! Nice, Dima')
-})
+  .then(() => {
+    console.log('MongoDB connected! Nice, Dima')
+  })
 
 app.get('/', (req, res) => {
-    //res.send('MotherFucker! Yeah!')
-      res.render('index')
+  // res.send('MotherFucker! Yeah!')
+  res.render('index')
 })
 
 app.post('/', (req, res) => {
-      res.send('OK')
+  res.send('OK')
 })
 
 app.get('/link-management-id', (req, res) => {
-      res.render('link-management-id')
+  res.render('link-management-id')
 })
-
 
 app.use(expressLayouts)
 app.set('layout', './layouts/full-width')
