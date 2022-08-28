@@ -8,11 +8,11 @@ app.get('/', (req, res) => {
       res.render('index')
 })
 
-app.get('/about', (req, res) => {
-      res.render('about')
+app.get('/link-management-id', (req, res) => {
+      res.render('link-management-id')
 })
 
-//app.set('views', path.join(__dirname, 'views'))
+
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 
