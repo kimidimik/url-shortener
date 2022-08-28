@@ -1,7 +1,13 @@
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
+const mongoose = require('mongoose')
 
 const app = express()
+
+mongoose.connect('mongodb://localhost:27017/userslinks')
+.then (() => {
+      console.log('MongoDB connected! Nice, Dima')
+})
 
 app.get('/', (req, res) => {
     //res.send('MotherFucker! Yeah!')
