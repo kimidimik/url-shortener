@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 
 mongoose.connect('mongodb://localhost:27017/userslinks')
   .then(() => {
-    console.log('MongoDB connected! Nice, Dima')
+    console.log('MongoDB connected!')
   })
 
 app.get('/', (req, res) => {
