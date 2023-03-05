@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const shortId = require('shortid')
+const short = require('short-uuid')
 
 const app = express()
 
@@ -31,6 +32,8 @@ app.post('/', (req, res) => {
     url,
     shortUrl: 'http://localhost:3000/l/' + shortId.generate()
   })
+  short.generate()
+  console.log(short.generate())
 
   // generate unique ID (npm i uuid)
   // crate a link in the database (uniqueID + url + shortUrl) (mongoose)
